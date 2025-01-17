@@ -1,11 +1,9 @@
 import BodyNav from "../body/body_nav";
 import { useEffect, useState } from "react";
 import BodyFooter from "../body/body_footer";
-import Colors from "../../interfaces/colors";
 import SidebarNav from "../side_bar/side_bar_nav";
 import Dashboard from "../../interfaces/dashboard";
 import SideBarHeader from "../side_bar/side_bar_header";
-import Typography from "../../interfaces/typography";
 
 
 const Wrapper = () => {
@@ -46,7 +44,7 @@ const Wrapper = () => {
             {/* Body Component */}
             <div className={`flex-grow-1 ${isMobile && isModalOpen ? '' : 'ms-250'}`} style={{ transition: "margin-left 0.3s ease", marginLeft: isMobile ? 0 : "250px" }}>
                 <BodyNav toggle_nav={() => setIsModalOpen(true)} dark_mode={mode} toggle_mode={() => setMode(prev => !prev)} />
-                <Typography dark_mode={mode}/>
+                <Dashboard dark_mode={mode}/>
                 <BodyFooter dark_mode={mode} />
             </div>
         </div>
