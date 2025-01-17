@@ -1,0 +1,39 @@
+.sidebar-nav {
+    width: 250px;
+    height: 100vh;
+    background-color: black;
+    padding: 16px;
+    overflow-y: auto; /* Allow vertical scrolling */
+}
+
+/* Scrollbar track (background) */
+.sidebar-nav::-webkit-scrollbar {
+    width: 10px; /* Set the width of the scrollbar */
+}
+
+.sidebar-nav::-webkit-scrollbar-track {
+    background: #444; /* Set the background color of the scrollbar track (the area the thumb moves through) */
+}
+
+/* Scrollbar thumb (the draggable part) */
+.sidebar-nav::-webkit-scrollbar-thumb {
+    background: #888; /* Set the color of the draggable part of the scrollbar */
+    border-radius: 10px; /* Optional: rounds the edges of the thumb */
+}
+
+/* Scrollbar thumb on hover */
+.sidebar-nav::-webkit-scrollbar-thumb:hover {
+    background: #555; /* Darker grey when the thumb is hovered */
+}
+
+/* Optional: for the scrollbar corner */
+.sidebar-nav::-webkit-scrollbar-corner {
+    background: #444;
+}
+
+.nav-title {
+    margin: 16px 0 8px;
+    font-size: 12px;
+    color: #888;
+    text-transform: uppercase;
+}

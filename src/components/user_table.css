@@ -1,0 +1,93 @@
+.table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.table th,
+.table td {
+  padding: 1rem;
+  text-align: left;
+}
+
+.table-heading{
+  color: #e0e0e0 !important;
+}
+
+.avatar {
+  position: relative;
+}
+
+.avatar-img {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  object-fit: contain;
+}
+
+.avatar-status {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: 2px solid #fff;
+}
+
+/* user_table.css */
+.progress {
+  height: 10px;  /* Make the progress bar longer */
+  border-radius: 5px;  /* Optional: round the corners of the progress bar */
+}
+
+.progress-bar {
+  box-shadow: none; /* Remove the shadow from the progress bar */
+}
+
+.bg-danger {
+  background-color: #dc3545 !important; /* Red for 0-10% */
+}
+
+.bg-warning {
+  background-color: #ffc107 !important; /* Yellow for 11-20% */
+}
+
+.bg-info {
+  background-color: #17a2b8 !important; /* Cyan for 21-30% */
+}
+
+.bg-primary {
+  background-color: #007bff !important; /* Blue for 31-40% */
+}
+
+.bg-secondary {
+  background-color: #6c757d !important; /* Grey for 41-50% */
+}
+
+.bg-success {
+  background-color: #28a745 !important; /* Green for 51-60% */
+}
+
+.bg-light {
+  background-color: #f8f9fa !important; /* Light for 61-70% */
+}
+
+.bg-dark {
+  background-color: #343a40 !important; /* Dark for 71-80% */
+}
+
+.bg-blue {
+  background-color: #003366 !important; /* Dark Blue for 81-90% */
+}
+
+.bg-green {
+  background-color: #228b22 !important; /* Forest Green for 91-100% */
+}
+
+.table>:not(caption)>*>* {
+  padding: 0.5rem 0.5rem;
+  color: inherit; /* Default text color */
+  background-color: inherit; /* Default background color */
+  border-bottom: 1px solid var(--table-border-color, #dee2e6); /* Default border color */
+  box-shadow: none !important; /* Remove the overriding box-shadow */
+}

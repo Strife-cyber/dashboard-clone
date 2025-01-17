@@ -1,0 +1,70 @@
+.menu-icon {
+    font-size: 18px;
+    width: 40px;
+    text-align: center;
+    color: #e0e0e0;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.menu-icon:hover {
+    color: black;
+    transform: scale(1.1); /* Slight zoom effect on hover */
+}
+
+/* Badge hover effect */
+.notification-link:hover .badge {
+    transform: scale(1.2); /* Enlarge slightly on hover */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Add shadow on hover */
+}
+
+/* Avatar container */
+.profile-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Profile image */
+.avatar-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+/* Hover effect for the container */
+.profile-avatar:hover {
+    transform: scale(1.1);
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Hover effect for the image */
+.profile-avatar:hover .avatar-image {
+    transform: scale(1.1);
+    filter: brightness(1.1) saturate(1.2);
+}
+
+/* Optional: Add a border or gradient around the avatar */
+.profile-avatar::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #ff7eb3, #ff758c, #ffd600);
+    z-index: -1;
+    filter: blur(6px);
+    opacity: 0.8;
+    transition: opacity 0.3s ease;
+}
+
+.profile-avatar:hover::before {
+    opacity: 1;
+}
+

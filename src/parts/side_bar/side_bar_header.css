@@ -1,0 +1,41 @@
+/* Styles for the sidebar header */
+.side-bar-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: black;
+    width: 250px;
+    padding: 1rem;
+    gap: 1rem;
+}
+
+/* Button base styles */
+.arrow-button {
+    background-color: black;
+    border: none;
+    color: white;
+    font-size: 1.5rem;
+    width: 25px;
+    height: 25px;
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: transform 0.4s ease, background-color 0.3s ease;
+}
+
+/* Animations for rotation */
+.rotate-left {
+    transform: rotate(0deg); /* Default state (left arrow) */
+}
+
+.rotate-right {
+    transform: rotate(180deg); /* Rotated state (right arrow) */
+}
+
+/* Add hover effect */
+.arrow-button:hover {
+    background-color: #333;
+}

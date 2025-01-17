@@ -1,0 +1,52 @@
+/* Footer Styles */
+.footer {
+    display: flex;
+    justify-content: space-between; /* Space between left and right content */
+    align-items: center; /* Align items vertically */
+    padding: 10px 20px; /* Add spacing inside the footer */
+    border-top: 1px solid #dee2e6; /* Subtle border for separation */
+    font-size: 14px; /* Slightly smaller font for footer text */
+    color: #6c757d; /* Neutral text color */
+    font-family: Arial, sans-serif; /* Clean font */
+  }
+  
+  .footer a {
+    color: #007bff; /* Link color */
+    text-decoration: none; /* Remove underline */
+    font-weight: 500; /* Slightly bold for emphasis */
+    transition: color 0.2s ease-in-out; /* Smooth color transition */
+  }
+  
+  .footer a:hover {
+    color: #0056b3; /* Darker blue on hover */
+    text-decoration: underline; /* Underline on hover for better accessibility */
+  }
+  
+  .footer-left,
+  .footer-right {
+    display: flex;
+    align-items: center; /* Center-align the text and links */
+  }
+  
+  .footer-left span,
+  .footer-right span {
+    margin: 0 5px; /* Space around text elements */
+  }
+  
+  .footer-right {
+    margin-left: auto; /* Push the right content to the edge */
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 576px) {
+    .footer {
+      flex-direction: column; /* Stack items on top of each other */
+      text-align: center; /* Center-align text for small screens */
+    }
+  
+    .footer-left,
+    .footer-right {
+      margin-bottom: 10px; /* Add spacing between stacked elements */
+    }
+  }
+  
