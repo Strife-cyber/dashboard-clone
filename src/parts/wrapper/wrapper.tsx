@@ -4,6 +4,21 @@ import BodyFooter from "../body/body_footer";
 import SidebarNav from "../side_bar/side_bar_nav";
 import Dashboard from "../../interfaces/dashboard";
 import SideBarHeader from "../side_bar/side_bar_header";
+import Accordion from "../../interfaces/accordion";
+import BreadCrumb from "../../interfaces/bread_crumb";
+
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Colors from "../../interfaces/colors";
+import Typography from "../../interfaces/typography";
+import Card from "../../interfaces/card";
+import Carousel from "../../interfaces/carousel";
+import Collapse from "../../interfaces/collapse";
+import ListGroup from "../../interfaces/list_group";
+import NavsAndTabs from "../../interfaces/navs_tabs";
+import Pagination from "../../interfaces/pagination";
+import Progress from "../../interfaces/progress";
+import Buttons from "../../interfaces/buttons";
+import ButtonGroups from "../../interfaces/button_groups";
 
 
 const Wrapper = () => {
@@ -44,7 +59,24 @@ const Wrapper = () => {
             {/* Body Component */}
             <div className={`flex-grow-1 ${isMobile && isModalOpen ? '' : 'ms-250'}`} style={{ transition: "margin-left 0.3s ease", marginLeft: isMobile ? 0 : "250px" }}>
                 <BodyNav toggle_nav={() => setIsModalOpen(true)} dark_mode={mode} toggle_mode={() => setMode(prev => !prev)} />
-                <Dashboard dark_mode={mode}/>
+                <Router>
+                    <Routes>
+                        <Route path="/" element={<Dashboard dark_mode={mode}/>}/>
+                        <Route path="/theme/colors" element={<Colors dark_mode={mode}/>}/>
+                        <Route path="/theme/typography" element={<Typography dark_mode={mode}/>}/>
+                        <Route path="/base/accordion" element={<Accordion dark_mode={mode}/>}/>
+                        <Route path="/base/breadcrumb" element={<BreadCrumb dark_mode={mode}/>}/>
+                        <Route path="/base/cards" element={<Card dark_mode={mode}/>}/>
+                        <Route path="/base/carousel" element={<Carousel dark_mode={mode}/>}/>
+                        <Route path="/base/collapse" element={<Collapse dark_mode={mode}/>}/>
+                        <Route path="/base/list-group" element={<ListGroup dark_mode={mode}/>}/>
+                        <Route path="/base/navs-tabs" element={<NavsAndTabs dark_mode={mode}/>}/>
+                        <Route path="/base/pagination" element={<Pagination dark_mode={mode}/>}/>
+                        <Route path="/base/progress" element={<Progress dark_mode={mode}/>}/>
+                        <Route path="/buttons/buttons" element={<Buttons dark_mode={mode}/>}/>
+                        <Route path="/buttons/button-groups" element={<ButtonGroups dark_mode={mode}/>}/>
+                    </Routes>
+                </Router>
                 <BodyFooter dark_mode={mode} />
             </div>
         </div>

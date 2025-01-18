@@ -21,7 +21,7 @@ const SidebarNav = () => {
             <div className="nav-content">
                 {/* Dashboard */}
                 <NavItem
-                    href="/dashboard"
+                    href="/"
                     icon={<img src={dashboard_icon} alt="Dashboard Icon" />}
                     badge={{
                         text: "NEW",
@@ -36,7 +36,7 @@ const SidebarNav = () => {
                 {/* Theme Section */}
                 <div className="nav-title">THEME</div>
                 <NavItem
-                    href="/colors"
+                    href="/theme/colors"
                     icon={<img src={colors_icon} alt="Colors Icon" style={{ width: "25px" }} />}
                 >
                     <p className="text-center" style={{ color: "#e0e0e0", marginBottom: "0" }}>
@@ -44,7 +44,7 @@ const SidebarNav = () => {
                     </p>
                 </NavItem>
                 <NavItem
-                    href="/typography"
+                    href="/theme/typography"
                     icon={<img src={typography_icon} alt="Typography Icon" style={{ width: "25px" }} />}
                 >
                     <p className="text-center" style={{ color: "#e0e0e0", marginBottom: "0" }}>
@@ -58,27 +58,27 @@ const SidebarNav = () => {
                     title="Base"
                     icon={<img src={base_icon} alt="Base Icon" style={{ width: "25px" }} />}
                     items={[
-                        {href: "/accordion" , label: "Accordion"},
-                        {href: "/breadcrumb", label: "Breadcrumb"},
-                        {href: "/cards", label: "Cards"},
-                        {href: "/carousel", label: "Carousel"},
-                        {href: "/collapse", label: "Collapse"},
-                        {href: "/list-group", label: "List Group"},
-                        {href: "/navs-tabs", label: "Navs & Tabs"},
-                        { href: "/pagination", label: "Pagination" },
-                        { href: "/placeholders", label: "Placeholders" },
-                        { href: "/popovers", label: "Popovers" },
-                        { href: "/progress", label: "Progress" },
-                        { href: "/spinners", label: "Spinners" },
-                        { href: "/tables", label: "Tables" },
-                        { href: "/tooltips", label: "Tooltips" },                                         
+                        {href: "/base/accordion" , label: "Accordion"},
+                        {href: "/base/breadcrumb", label: "Breadcrumb"},
+                        {href: "/base/cards", label: "Cards"},
+                        {href: "/base/carousel", label: "Carousel"},
+                        {href: "/base/collapse", label: "Collapse"},
+                        {href: "/base/list-group", label: "List Group"},
+                        {href: "/base/navs-tabs", label: "Navs & Tabs"},
+                        { href: "/base/pagination", label: "Pagination" },
+                        { href: "/base/placeholders", label: "Placeholders" },
+                        { href: "/base/popovers", label: "Popovers" },
+                        { href: "/base/progress", label: "Progress" },
+                        { href: "/base/spinners", label: "Spinners" },
+                        { href: "/base/tables", label: "Tables" },
+                        { href: "/base/tooltips", label: "Tooltips" },                                         
                     ]}
                 />
                 <NavGroup title="Buttons" icon={<img src={buttons_icon} alt="Buttons Icon" style={{ width: "25px" }} />} items={[
-                    { href: "/buttons", label: "Buttons" },
-                    { href: "/button-groups", label: "Button groups" },
-                    { href: "/dropdowns", label: "Dropdowns" },
-                    { href: "/loading-buttons", label: "Loading Buttons", badge: { text: "PRO", style: { backgroundColor: "#FF007F", color: "white" }  }}
+                    { href: "/buttons/buttons", label: "Buttons" },
+                    { href: "/buttons/button-groups", label: "Button groups" },
+                    { href: "/buttons/dropdowns", label: "Dropdowns" },
+                    { href: "/buttons/loading-buttons", label: "Loading Buttons", badge: { text: "PRO", style: { backgroundColor: "#FF007F", color: "white" }  }}
                 ]}/>
                 <NavGroup title="Forms" icon={<img src={forms_icon} alt="Forms Icon" style={{ width: "25px" }}/>} items={[
                     { href: "/form-control", label: "Form Control" },
@@ -95,9 +95,9 @@ const SidebarNav = () => {
                     { href: "/validation", label: "Validation" }
                 ]}/>
                 <NavGroup title="Icons" icon={<img src={icons_icon} alt="Icons Icon" style={{ width: "25px" }} />} items={[
-                    { href: "/free", label: "CoreUI Free", badge: { text: "FREE", style: { backgroundColor: "#28a745", color: "white" } }},
-                    { href: "/flags", label: "CoreUI Flags" },
-                    { href: "/brands", label: "CoreUI Brands" }
+                    { href: "/icons/free", label: "CoreUI Free", badge: { text: "FREE", style: { backgroundColor: "#28a745", color: "white" } }},
+                    { href: "/icons/flags", label: "CoreUI Flags" },
+                    { href: "/icons/brands", label: "CoreUI Brands" }
                 ]}/>
                 <NavGroup title="Notifications" icon={<img src={notifications_icon} alt="Notifications Icon" style={{ width: "25px" }} />} items={[
                     { href: "alerts", label: "Alerts" },
