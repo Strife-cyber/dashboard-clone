@@ -19,6 +19,13 @@ import Pagination from "../../interfaces/pagination";
 import Progress from "../../interfaces/progress";
 import Buttons from "../../interfaces/buttons";
 import ButtonGroups from "../../interfaces/button_groups";
+import Placeholders from "../../interfaces/placeholders";
+import Popovers from "../../interfaces/popovers";
+import Spinners from "../../interfaces/spinners";
+import Tooltips from "../../interfaces/tooltips";
+import ReactTableWithFilters from "../../interfaces/tables";
+import Dropdowns from "../../interfaces/dropdowns";
+import LoadingButtons from "../../interfaces/loading_buttons";
 
 
 const Wrapper = () => {
@@ -73,8 +80,15 @@ const Wrapper = () => {
                         <Route path="/base/navs-tabs" element={<NavsAndTabs dark_mode={mode}/>}/>
                         <Route path="/base/pagination" element={<Pagination dark_mode={mode}/>}/>
                         <Route path="/base/progress" element={<Progress dark_mode={mode}/>}/>
+                        <Route path="/base/placeholders" element={<Placeholders dark_mode={mode}/>}/>
+                        <Route path="/base/popovers" element={<Popovers dark_mode={mode}/>}/>
+                        <Route path="/base/spinners" element={<Spinners dark_mode={mode}/>}/>
+                        <Route path="/base/tables" element={<ReactTableWithFilters dark_mode={mode}/>}/>
+                        <Route path="/base/tooltips" element={<Tooltips dark_mode={mode}/>}/>
                         <Route path="/buttons/buttons" element={<Buttons dark_mode={mode}/>}/>
                         <Route path="/buttons/button-groups" element={<ButtonGroups dark_mode={mode}/>}/>
+                        <Route path="/buttons/dropdowns" element={<Dropdowns dark_mode={mode}/>}/>
+                        <Route path="/buttons/loading-buttons" element={<LoadingButtons dark_mode={mode}/>}/>
                     </Routes>
                 </Router>
                 <BodyFooter dark_mode={mode} />
