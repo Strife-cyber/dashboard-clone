@@ -1,7 +1,7 @@
 .sidebar-nav {
     width: 250px;
     height: 100vh;
-    background-color: black;
+    background-color: #1F2937;
     padding: 16px;
     overflow-y: auto; /* Allow vertical scrolling */
 }

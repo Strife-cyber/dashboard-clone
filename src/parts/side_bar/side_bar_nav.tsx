@@ -3,11 +3,13 @@ import NavItem from "../../components/nav_item";
 import NavGroup from "../../components/nav_group";
 
 import base_icon from "../../assets/base.svg";
+import chart_icon from "../../assets/chart.svg";
 import forms_icon from "../../assets/forms.svg";
 import icons_icon from "../../assets/icons.svg";
 import colors_icon from "../../assets/colors.svg";
 import widgets_icon from "../../assets/widgets.svg";
 import buttons_icon from "../../assets/buttons.svg";
+import calendar_icon from "../../assets/calendar.svg";
 import dashboard_icon from "../../assets/dashboard.svg";
 import typography_icon from "../../assets/typography.svg";
 import smart_table_icon from "../../assets/smart_table.svg";
@@ -118,6 +120,16 @@ const SidebarNav = () => {
 
                 {/* Plugins Section */}
                 <div className="nav-title">PLUGINS</div>
+                <NavItem href="/plugins/calendar" icon={<img src={calendar_icon} alt="Calendar Icon" style={{ width: "25px" }}/>} badge={{ text: "PRO", style: { backgroundColor: "#FF007F", color: "white" }}}>
+                    <p className="text-center" style={{ color: "#e0e0e0", marginBottom: "0" }}>
+                        Calendar
+                    </p>
+                </NavItem>
+                <NavItem href="/plugins/charts" icon={<img src={chart_icon} alt="Calendar Icon" style={{ width: "25px" }}/>}>
+                    <p className="text-center" style={{ color: "#e0e0e0", marginBottom: "0" }}>
+                        Charts
+                    </p>
+                </NavItem>
 
                 {/* Extras Section */}
                 <div className="nav-title">EXTRAS</div>

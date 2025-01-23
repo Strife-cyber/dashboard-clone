@@ -26,16 +26,20 @@ import Tooltips from "../../interfaces/tooltips";
 import ReactTableWithFilters from "../../interfaces/tables";
 import Dropdowns from "../../interfaces/dropdowns";
 import LoadingButtons from "../../interfaces/loading_buttons";
+import Calendar from "../../interfaces/calendar";
+import Charts from "../../interfaces/charts";
 
 
 const Wrapper = () => {
     const [mode, setMode] = useState(false);
     const [isMobile, setIsMobile] = useState(false);
     const [isModalOpen, setIsModalOpen] = useState(false);
+    const [isLargeEnough, setIsLargeEnough] = useState(false);
 
     useEffect(() => {
         const handleResize = () => {
             setIsMobile(window.innerWidth <= 992);
+            setIsLargeEnough(window.innerWidth >= 1000);
         };
 
         window.addEventListener('resize', handleResize);
@@ -68,7 +72,7 @@ const Wrapper = () => {
                 <BodyNav toggle_nav={() => setIsModalOpen(true)} dark_mode={mode} toggle_mode={() => setMode(prev => !prev)} />
                 <Router>
                     <Routes>
-                        <Route path="/" element={<Dashboard dark_mode={mode}/>}/>
+                        <Route path="/" element={<Dashboard dark_mode={mode} isMobile={!isLargeEnough}/>}/>
                         <Route path="/theme/colors" element={<Colors dark_mode={mode}/>}/>
                         <Route path="/theme/typography" element={<Typography dark_mode={mode}/>}/>
                         <Route path="/base/accordion" element={<Accordion dark_mode={mode}/>}/>
@@ -89,6 +93,8 @@ const Wrapper = () => {
                         <Route path="/buttons/button-groups" element={<ButtonGroups dark_mode={mode}/>}/>
                         <Route path="/buttons/dropdowns" element={<Dropdowns dark_mode={mode}/>}/>
                         <Route path="/buttons/loading-buttons" element={<LoadingButtons dark_mode={mode}/>}/>
+                        <Route path="/plugins/calendar" element={<Calendar dark_mode={mode}/>}/>
+                        <Route path="/plugins/charts" element={<Charts dark_mode={mode}/>}/>
                     </Routes>
                 </Router>
                 <BodyFooter dark_mode={mode} />
