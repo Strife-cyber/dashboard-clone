@@ -38,8 +38,8 @@ const getProgressBarColor = (usage: number): string => {
 
 const UserTable: React.FC<UserTableProps> = ({ tableItems }) => {
   return (
-    <div className="table-responsive" style={{ overflowX: 'auto' }}>
-      <table className="table align-middle table-hover mb-0">
+    <div className="table-responsive" style={{ overflowX: 'clip' }}>
+      <table className="table table-hover mb-0">
         <thead className="fw-semibold text-body-secondary">
           <tr>
             <th className="text-center table-heading" style={{ width: '50px' }}>
@@ -66,7 +66,7 @@ const UserTable: React.FC<UserTableProps> = ({ tableItems }) => {
               </td>
               <td>
                 <div>{item.name}</div>
-                <div className="small text-body-secondary text-nowrap">
+                <div className="small text-body-secondary text-wrap">
                   <span>{item.type}</span> | Registered: {item.registeredDate}
                 </div>
               </td>
@@ -78,7 +78,7 @@ const UserTable: React.FC<UserTableProps> = ({ tableItems }) => {
               <td>
                 <div className="d-flex justify-content-between align-items-baseline mb-1">
                   <div className="fw-semibold">{item.usage}%</div>
-                  <div className="small text-body-secondary text-nowrap ms-2" style={{ fontSize: '10px' }}>
+                  <div className="small text-body-secondary text-wrap ms-2" style={{ fontSize: '10px' }}>
                     {item.usagePeriod}
                   </div>
                 </div>

@@ -39,7 +39,7 @@ const Wrapper = () => {
     useEffect(() => {
         const handleResize = () => {
             setIsMobile(window.innerWidth <= 992);
-            setIsLargeEnough(window.innerWidth >= 1000);
+            setIsLargeEnough(window.innerWidth >= 1400);
         };
 
         window.addEventListener('resize', handleResize);
